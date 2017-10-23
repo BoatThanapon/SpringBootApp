@@ -36,15 +36,27 @@ public class ToonController {
         return fault;
     }
 
-//    @RequestMapping(value = "/toons/updatetoon", method = RequestMethod.PUT, produces = "application/json")
-//    public String UpdateToon(@RequestBody Toon toon) {
-//        boolean updateToon = toonService.UpdateToon(toon);
-//        if (updateToon == true){
-//            String success = "Success";
-//            return success;
-//        }
-//
-//        String fault = "fault";
-//        return fault;
-//    }
+    @RequestMapping(value = "/toons/updatetoon", method = RequestMethod.PUT, produces = "application/json")
+    public String UpdateToon(@RequestBody Toon toon) {
+        boolean updateToon = toonService.UpdateToon(toon);
+        if (updateToon == true){
+            String success = "Success";
+            return success;
+        }
+
+        String fault = "fault";
+        return fault;
+    }
+
+    @RequestMapping(value = "/toons/delete/{id}", method = RequestMethod.DELETE, produces = "application/json")
+    public String DeleteToon(@PathVariable String id) {
+        boolean updateToon = toonService.DeleteToon(id);
+        if (updateToon == true){
+            String success = "Success";
+            return success;
+        }
+
+        String fault = "fault";
+        return fault;
+    }
 }

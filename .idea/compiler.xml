@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="AdventureGame-Boat" />
         <module name="SpringBootApp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="AdventureGame-Boat" target="1.8" />
       <module name="SpringBootApp" target="1.8" />
     </bytecodeTargetLevel>
   </component>

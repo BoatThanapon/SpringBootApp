@@ -29,12 +29,18 @@ public class ToonService {
         return true;
     }
 
-//    public boolean UpdateToon (Toon toon){
-//        Toon findToon = GetToonById(toon.getId());
-//        findToon.setId(toon.getId());
-//        findToon.setName(toon.getName());
-//
-//        return true;
-//    }
+    public boolean UpdateToon (Toon toon){
+        Toon findToon = GetToonById(toon.getId());
+        findToon.setId(toon.getId());
+        findToon.setName(toon.getName());
 
+        return true;
+    }
+
+    public boolean DeleteToon (String id){
+        Toon findToon = GetToonById(id);
+        listToon.remove(findToon);
+
+        return true;
+    }
 }
